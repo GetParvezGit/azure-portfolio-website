@@ -56,6 +56,7 @@ nav {
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   transition: padding .3s, background .35s;
+  gap: 1rem;
 }
 .nav-logo {
   font-family: 'Space Grotesk', sans-serif;
@@ -126,6 +127,7 @@ nav {
 .hero-content {
   position: relative; z-index: 2;
   max-width: 680px;
+  margin-top: 60px;
 }
 .hero-eyebrow {
   font-family: 'JetBrains Mono', monospace;
@@ -211,19 +213,18 @@ section { padding: 6rem 3rem; }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem; align-items: start;
+  gap: 4rem; align-items: center;
 }
 .about-text {
   position: relative;
   padding-right: 3.6rem;
-  min-height: 220px;
   font-size: 1rem;
   line-height: 1.8;
   color: var(--muted);
 }
 .story-slider { 
     position: relative; 
-    min-height: 220px; 
+    min-height: 200px; 
 }
 .story-slide {
   position: absolute;

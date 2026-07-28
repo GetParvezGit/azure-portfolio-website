@@ -150,3 +150,26 @@ if (storySlider && storySlides.length) {
 
   updateStoryNav();
 }
+
+const hamburger = document.getElementById('navHamburger');
+const drawer    = document.getElementById('navDrawer');
+const drawerClose = document.getElementById('navDrawerClose');
+ 
+function openDrawer() {
+  drawer.classList.add('is-open');
+  hamburger.classList.add('is-open');
+}
+function closeDrawer() {
+  drawer.classList.remove('is-open');
+  hamburger.classList.remove('is-open');
+}
+ 
+hamburger?.addEventListener('click', () => {
+  drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+});
+ 
+drawerClose?.addEventListener('click', closeDrawer);
+ 
+drawer?.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', closeDrawer)
+);

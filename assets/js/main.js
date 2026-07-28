@@ -31,7 +31,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 /* ─── NAV SHRINK ─── */
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('mainNav');
-  if (nav) {
-    nav.style.padding = window.scrollY > 40 ? '.6rem 3rem' : '1rem 3rem';
-  }
+  if (!nav) return;
+  const side = window.innerWidth <= 768 ? '1.25rem' : '3rem';
+  nav.style.padding = window.scrollY > 40 ? `.6rem ${side}` : `1rem ${side}`;
 });
